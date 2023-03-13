@@ -2,29 +2,6 @@ body {
     margin: 0;
 }
 
-.navigaatio {
-    grid-area: header;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 5em;
-    background-color: #FF8055;
-}
-
-.vasen {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-}
-
-.oikea {
-    grid-area: right;
-}
-
-.footer {
-    grid-area: footer;
-}
-
 .grid-container {
     width: 100%;
     height: 100%;
@@ -35,15 +12,45 @@ body {
       'footer footer footer footer footer footer';
     row-gap: 1em;
     background-color: white
-  }
+}
+
+.navigaatio {
+    grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5em;
+    background-color: #FF8055;
+}
+
+#kirjaudu_ulos {
+    margin-left: 15%;
+}
+
+.vasen {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.oikea {
+    grid-area: right;   
+}
+
+.footer {
+    grid-area: footer;
+}
 
 .mietelause {
     background-color: #FFEDD8;
     text-align: center;
+    margin-left: 5%;
     margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
-    width: 300px;
+    width: 500px;
     height: 50px;
 }
 
@@ -51,28 +58,24 @@ body {
     width: 150px;
     height: 55px;
     margin-top: 10px;
+    margin-right: 1%;
+}
+
+#viimeisin_mittaus_teksti {
+    text-align: center;
 }
 
 #hrv_mittaus {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+    width: 70%;
 }
 
 #hrv_data {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+    width: 70%;
 }
 
-#mittaustulokset_nappula {
+#mittaustulokset_nappula { 
     width: 30%;
-    height: 20%; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    height: 20%;
 }
 
 body button {
@@ -90,21 +93,16 @@ body button {
     background-color: #FFEDD8;
     text-align:center;
     transition: all 0.15s;
-    }
+}
 
 body button:hover{
     color:#2EC4B6;
     border-color:#2EC4B6;
-    }
+}
 
 body button:active{
     color:#FF8055;
     border-color:#FF8055;
-    }
-
-#mittaustulokset_nappula {
-    width: 30%;
-    height: 10%;
 }
 
 #hymiot {
@@ -117,24 +115,40 @@ body button:active{
     color: #FF8055;
 }
 
+.fa-face-laugh-beam:active {
+    color: #2EC4B6;
+}
+
 .fa-face-smile-beam:hover {
     color: #FF8055;
+}
+
+.fa-face-smile-beam:active {
+    color: #2EC4B6;
 }
 
 .fa-face-grimace:hover {
     color: #FF8055;
 }
 
+.fa-face-grimace:active {
+    color: #2EC4B6;
+}
+
 .fa-face-frown-open:hover {
     color: #FF8055;
+}
+
+.fa-face-frown-open:active {
+    color: #2EC4B6;
 }
 
 .fa-face-frown:hover {
     color: #FF8055;
 }
-#paivakirjamerkinnan_tallennus {
-    width: 20%;
-    height: 10%;
+
+.fa-face-frown:active {
+    color: #2EC4B6;
 }
 
 form textarea {
@@ -144,22 +158,44 @@ form textarea {
     margin-top: 1em;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #2EC4B6;
     border-radius: 4px;
     resize: none;
+}
+
+#paivakirjamerkinnan_tallennus {
+    width: 30%;
+    height: 5%;
 }
 
 .footer {
     background-color:#2EC4B6;
     margin-top: 5%;
     width: 100%;
-    height: 5em;
+    height: 9em;
 }
 
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 1050px) {
     .grid-container {
-        width: 100%;
+        grid-template-areas: 
+        "header" "header"
+        "right" "right"
+        "main" "main"
+        "footer" "footer";
+    }
+
+    .oikea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+
+    #hrv_mittaus {
+        width: 50%;
+    }
+    
+    #hrv_data {
+        width: 50%;
     }
 }
-
-
