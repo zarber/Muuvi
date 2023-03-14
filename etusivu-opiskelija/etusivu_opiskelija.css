@@ -58,7 +58,7 @@ body {
     width: 150px;
     height: 55px;
     margin-top: 10px;
-    margin-right: 1%;
+    margin-right: 3%;
 }
 
 #viimeisin_mittaus_teksti {
@@ -74,8 +74,13 @@ body {
 }
 
 #mittaustulokset_nappula { 
-    width: 30%;
-    height: 20%;
+    width: 200px;
+    height: 50px;
+}
+
+#paivakirjamerkinnan_tallennus {
+    width: 150px;
+    height: 40px;
 }
 
 body button {
@@ -163,10 +168,6 @@ form textarea {
     resize: none;
 }
 
-#paivakirjamerkinnan_tallennus {
-    width: 30%;
-    height: 5%;
-}
 
 .footer {
     background-color:#2EC4B6;
