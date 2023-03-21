@@ -18,9 +18,23 @@ body {
 .navigation {
     grid-area: header;
     display: flex;
-    justify-content: space-evenly;
+    align-content: space-between;
     height: 5em;
     background-color: #FF8055;
+}
+
+.left_side_of_nav {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1em;
+}
+
+.right_side_of_nav {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
 }
 
 .left {
@@ -39,30 +53,6 @@ body {
     grid-area: footer;
 }
 
-#info {
-    margin-right: 1em;
-}
-
-#exercise_plan {
-    margin-right: 1em;
-}
-
-#activities {
-    margin-right: 1em;
-}
-
-
-.aphorism {
-    background-color: #FFEDD8;
-    text-align: center;
-    margin-left: 1em;
-    margin-top: 0.8em;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
-    font-weight:600;
-    width: 55%;
-    height: 60%;
-}
 
 #logo {
     width: 150px;
@@ -76,12 +66,18 @@ body {
     text-align: center;
 }
 
-#hrv_measurement {
+#hrv_data {
     width: 70%;
 }
 
-#hrv_data {
-    width: 70%;
+#more_details {
+    width: 150px;
+    height: 50px;
+}
+
+#exercise_plan_edit {
+    width: 150px;
+    height: 40px;
 }
 
 #hrv_measurement_button { 
@@ -89,10 +85,6 @@ body {
     height: 50px;
 }
 
-#diary_save {
-    width: 150px;
-    height: 40px;
-}
 
 body button {
     display:inline-block;
@@ -113,12 +105,6 @@ body button {
     transition: all 0.15s;
 }
 
-#log_out {
-    margin-left: 8%;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
 body button:hover{
     color:#2EC4B6;
     border-color:#2EC4B6;
@@ -127,6 +113,10 @@ body button:hover{
 body button:active{
     color:#FF8055;
     border-color:#FF8055;
+}
+
+.fa-solid fa-question {
+    margin-left: 10em;
 }
 
 #emojis {
@@ -187,6 +177,7 @@ form textarea {
     border-radius: 2em;
     resize: none;
 }
+
 
 .footer {
     background-color:#2EC4B6;
