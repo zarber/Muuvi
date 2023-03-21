@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .grid-container {
@@ -18,13 +19,8 @@ body {
     grid-area: header;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
     height: 5em;
     background-color: #FF8055;
-}
-
-#kirjaudu_ulos {
-    margin-left: 15%;
 }
 
 .vasen {
@@ -43,22 +39,37 @@ body {
     grid-area: footer;
 }
 
+#infopankki {
+    margin-right: 1em;
+}
+
+#liikuntasuunnitelma {
+    margin-right: 1em;
+}
+
+#aktiviteetit {
+    margin-right: 1em;
+}
+
+
 .mietelause {
     background-color: #FFEDD8;
     text-align: center;
-    margin-left: 5%;
-    margin-top: 10px;
+    margin-left: 1em;
+    margin-top: 0.8em;
+    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    font-weight: 500;
-    width: 500px;
-    height: 50px;
+    font-weight:600;
+    width: 55%;
+    height: 60%;
 }
 
 #logo {
     width: 150px;
     height: 55px;
-    margin-top: 10px;
-    margin-right: 3%;
+    margin-top: 0.5em;
+    margin-right: 2em;
+    padding-left: 0.5em;
 }
 
 #viimeisin_mittaus_teksti {
@@ -85,19 +96,27 @@ body {
 
 body button {
     display:inline-block;
-    border:0.16em solid black;
-    margin-top: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1.2em;
     margin-left: 0.5em;
     margin-right: 0.5em;
     height: 50%;
-    box-sizing: border-box;
+    border: 0;
+    border-radius: 18px;
     text-decoration:none;
-    text-transform:uppercase;
-    font-weight:400;
-    color:black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight:700;
     background-color: #FFEDD8;
     text-align:center;
     transition: all 0.15s;
+}
+
+#kirjaudu_ulos {
+    margin-left: 8%;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 body button:hover{
@@ -161,10 +180,11 @@ form textarea {
     width: 80%;
     height: 150px;
     margin-top: 1em;
+    font-family: 'Quicksand', sans-serif;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #2EC4B6;
-    border-radius: 4px;
+    border: 0.2em solid #2EC4B6;
+    border-radius: 2em;
     resize: none;
 }
 
@@ -173,7 +193,7 @@ form textarea {
     background-color:#2EC4B6;
     margin-top: 5%;
     width: 100%;
-    height: 9em;
+    height: 6em;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -190,13 +210,5 @@ form textarea {
         justify-content: center;
         align-items: center;
         flex-direction: column; 
-    }
-
-    #hrv_mittaus {
-        width: 50%;
-    }
-    
-    #hrv_data {
-        width: 50%;
     }
 }
