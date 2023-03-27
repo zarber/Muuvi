@@ -26,11 +26,10 @@ body {
 .navigation a {
     display:inline-block;
     padding: 0.5em 1em 0em 1em;
-    height: 1.5em;
+    height: 2.2em;
     margin-top: 1.2em;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    height: 50%;
     border: 0;
     border-radius: 18px;
     text-decoration:none;
