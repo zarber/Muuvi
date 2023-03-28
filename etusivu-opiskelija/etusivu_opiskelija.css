@@ -240,38 +240,3 @@ form textarea {
         flex-direction: column; 
     }
 }
-
-@media screen and (max-width: 1150px) {
-    .navigationresponsive .aphorism {
-        display: none;
-    }
-    .navigationresponsive {
-        background-color: #FF8055;
-    }
-    .navigationresponsive a.icon { 
-      color:#2EC4B6;
-      position: absolute;
-      right: 1em;
-      top: 1em;
-    }
-    .navigationresponsive a {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 16px;
-      font-weight:700;
-      margin: 1em 1em 1em 0.5em;
-      color: black;
-      text-decoration: none;
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .fa-solid {
-        margin-bottom: 0.5em;
-    }
-    .navigationresponsive a:hover {
-      color: #FFEDD8;
-    }
-    .navigationresponsive a:active {
-        color:#2EC4B6;
-      }
-}
