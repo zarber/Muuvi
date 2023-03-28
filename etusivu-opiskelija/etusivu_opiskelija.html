@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a9d2d734c.js" crossorigin="anonymous"></script>
-    <script src="etusivu_opiskelija.js"></script>
   </head>
   <body> 
     <div class="grid-container">
-      <div class="navigation" id="topNav">
+      <nav class="navigation" id="topNav">
         <img id="logo" src="kuvat/Muuvi-logo.png">
         <a href="#info">Infopankki</a>
         <a href="#excercise_plan">Liikuntasuunnitelma</a>
         <a href="#activities">Aktiviteetit</a>
         <a href="#diary">Päiväkirja</a>
-        <div class="aphorism">Mietelause</div>
+        <p id="aphorism">Mietelause</p>
         <a href="#log_out">Kirjaudu ulos</a>
         <a id="help-icon" href="#help">
             <i class="fa-solid fa-question fa-2x"></i>
@@ -27,7 +27,7 @@
         <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
             <i class="fa fa-bars fa-2x"></i>
         </a>
-     </div>
+      </nav>
       <div class="left">
         <h1 id="hrv_text">Viimeisin HRV-mittaus:</h1>
         <img id="hrv_measurement" src="kuvat/HRV_mittaus.png">
@@ -65,5 +65,5 @@
         </div>
       </div>
     </div>
-    
+    <script src="etusivu_opiskelija.js"></script>
   </body>
