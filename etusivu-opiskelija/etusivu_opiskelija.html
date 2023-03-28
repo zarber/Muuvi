@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a9d2d734c.js" crossorigin="anonymous"></script>
+    <script src="etusivu_opiskelija.js"></script>
   </head>
   <body> 
     <div class="grid-container">
@@ -16,9 +17,13 @@
         <button id="infopankki">Infopankki</button>
         <button id="liikuntasuunnitelma">Liikuntasuunnitelma</button>
         <button id="aktiviteetit">Aktiviteetit</button>
-        <button id="paivakirja">Päiväkirja</button>
-        <div class="mietelause">Mietelause</div>
-        <button id="kirjaudu_ulos">Kirjaudu ulos</button>
+        <a href="../paivakirja-opiskelija/paivakirja_opiskelija.html">
+          <button id="paivakirja">Päiväkirja</button>
+        <a>
+        <!-- <div class="mietelause">Mietelause</div> -->
+        <a href="../Login-Muuvi/kirjautumissivu.html">
+          <button id="kirjaudu_ulos">Kirjaudu ulos</button>
+        </a>
         <button><i class="fa-solid fa-question fa-2x"></i></button> 
       </div>
       <div class="vasen">
@@ -46,5 +51,17 @@
         <button id="paivakirjamerkinnan_tallennus">Tallenna</button>
       </div>
       <div class="footer"></div>
-    </div>  
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+        </div>
+        <div class="modal-body">
+          <!-- Lisää modal sisältö tähän -->
+        </div>
+      </div>
+    </div>
+    
   </body>
