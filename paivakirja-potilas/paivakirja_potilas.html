@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Päiväkirja</title>
+    <link rel="stylesheet" href="etusivu_opiskelija.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a9d2d734c.js" crossorigin="anonymous"></script>
+  </head>
+  <body> 
+    <div class="grid-container">
+      <div class="navigation">
+        <button id="back">Takaisin</button>
+        <button id="activities">Aktiviteetit</button>
+        <img id="logo" src="kuvat/Muuvi-logo.png">
+        <button id="log_out">Kirjaudu ulos</button>
+        <button><i class="fa-solid fa-question fa-2x"></i></button> 
+      </div>
+      <div class="diary">
+        <h1>Lisää uusi päiväkirjamerkintä</h1>
+        <form action="/submit" method="post">
+          <label for="diary_date">Päivämäärä:</label>
+          <input type="date" id="diary_date" name="diary_date">
+          <textarea>Miten voit?...</textarea>
+          <div id="emojis">
+            <i class="emoji fa-regular fa-face-laugh-beam fa-3x"></i>
+            <i class="emoji fa-regular fa-face-smile-beam fa-3x"></i>
+            <i class="emoji fa-regular fa-face-grimace fa-3x"></i>
+            <i class="emoji fa-regular fa-face-frown-open fa-3x"></i>
+            <i class="emoji fa-regular fa-face-frown fa-3x"></i>
+          </div>
+          <button id="diary_save" type="submit">Tallenna</button>
+        </form>
+      </div>
+      <div class="diary_history">
+        <h1>Tallennetut päiväkirjamerkinnät</h1>
+
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const emojis = document.querySelectorAll('.emoji');
+        
+        emojis.forEach(emoji => {
+          emoji.addEventListener('click', (event) => {
+            // Remove the 'emoji-active' class from all other emojis
+            emojis.forEach(otherEmoji => {
+              if (otherEmoji !== event.target) {
+                otherEmoji.classList.remove('emoji-active');
+              }
+            });
+    
+            // Toggle the 'emoji-active' class for the clicked emoji
+            event.target.classList.toggle('emoji-active');
+          });
+        });
+      });
+    </script>  
+  </body>
