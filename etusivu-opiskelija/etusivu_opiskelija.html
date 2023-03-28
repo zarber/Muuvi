@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Etusivu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="etusivu_opiskelija.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,43 +13,44 @@
   </head>
   <body> 
     <div class="grid-container">
-      <div class="navigaatio">
+      <div class="navigation" id="topNav">
         <img id="logo" src="kuvat/Muuvi-logo.png">
-        <button id="infopankki">Infopankki</button>
-        <button id="liikuntasuunnitelma">Liikuntasuunnitelma</button>
-        <button id="aktiviteetit">Aktiviteetit</button>
-        <a href="../paivakirja-opiskelija/paivakirja_opiskelija.html">
-          <button id="paivakirja">Päiväkirja</button>
-        <a>
-        <!-- <div class="mietelause">Mietelause</div> -->
-        <a href="../Login-Muuvi/kirjautumissivu.html">
-          <button id="kirjaudu_ulos">Kirjaudu ulos</button>
+        <a href="#info">Infopankki</a>
+        <a href="#excercise_plan">Liikuntasuunnitelma</a>
+        <a href="#activities">Aktiviteetit</a>
+        <a href="#diary">Päiväkirja</a>
+        <div class="aphorism">Mietelause</div>
+        <a href="#log_out">Kirjaudu ulos</a>
+        <a id="help-icon" href="#help">
+            <i class="fa-solid fa-question fa-2x"></i>
         </a>
-        <button><i class="fa-solid fa-question fa-2x"></i></button> 
-      </div>
-      <div class="vasen">
-        <h1 id="viimeisin_mittaus_teksti">Viimeisin HRV-mittaus:</h1>
-        <img id="hrv_mittaus" src="kuvat/HRV_mittaus.png">
+        <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+     </div>
+      <div class="left">
+        <h1 id="hrv_text">Viimeisin HRV-mittaus:</h1>
+        <img id="hrv_measurement" src="kuvat/HRV_mittaus.png">
         <img id="hrv_data" src="kuvat/HRV_data.png">
-        <button id="mittaustulokset_nappula">Aikaisemmat mittaustulokset</button>
+        <button id="hrv_measurement_button">Aikaisemmat mittaustulokset</button>
       </div>
-      <div class="oikea">
+      <div class="right">
         <h1>Päivän aktiivisuus:</h1>
         <h2>🤸🏼‍♀️8563 askelta</h2>
-        <img id="aktiivisuuspampula" src="kuvat/aktiivisuuspampula.png">
+        <img id="activity" src="kuvat/aktiivisuuspampula.png">
         <h1>Lisää uusi päiväkirjamerkintä:</h1>
         <h2>📅11.3.2023</h2>
         <form>
           <textarea>Lisää tähän päivän mietteesi...</textarea>
         </form>
-        <div id="hymiot">
+        <div id="emojis">
           <i class="fa-regular fa-face-laugh-beam fa-3x"></i>
           <i class="fa-regular fa-face-smile-beam fa-3x"></i>
           <i class="fa-regular fa-face-grimace fa-3x"></i>
           <i class="fa-regular fa-face-frown-open fa-3x"></i>
           <i class="fa-regular fa-face-frown fa-3x"></i>
         </div>
-        <button id="paivakirjamerkinnan_tallennus">Tallenna</button>
+        <button id="diary_save">Tallenna</button>
       </div>
       <div class="footer"></div>
     </div>
