@@ -32,7 +32,30 @@ function topNavFunction() {
     } else {
       x.className = "navigation";
     }
-  }
+}
+
+var infomodal = document.getElementById("infoModal");
+var infobtn = document.getElementById("info");
+var infospan = document.getElementsByClassName("closeInfo")[0];
+
+var helpmodal = document.getElementById("helpModal");
+var helpbtn = document.getElementById("help-icon");
+var helpspan = document.getElementsByClassName("closeHelp")[0];
+
+infobtn.onclick = function() {
+  infomodal.style.display = "block";
+}
+helpbtn.onclick = function() {
+  helpmodal.style.display = "block";
+}
+
+infospan.onclick = function() {
+  infomodal.style.display = "none";
+}
+helpspan.onclick = function() {
+  helpmodal.style.display = "none";
+}
+
 
 const aphorisms = [
     '"Liikunta on parasta terveydenhoitoa."',

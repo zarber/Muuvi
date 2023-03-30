@@ -2,23 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Etusivu</title>
+    <title>Muuvi etusivu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="etusivu_opiskelija.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a9d2d734c.js" crossorigin="anonymous"></script>
   </head>
   <body> 
     <div class="grid-container">
       <nav class="navigation" id="topNav">
         <img id="logo" src="kuvat/Muuvi-logo.png">
-        <a href="#info">Infopankki</a>
+        <a id="info" href="#info">Infopankki</a>
         <a href="#excercise_plan">Liikuntasuunnitelma</a>
-        <a href="#activities">Aktiviteetit</a>
-        <a href="#diary">Päiväkirja</a>
+        <a href="#activities_and_diary">Aktiviteetit ja päiväkirja</a>
         <p id="aphorism">Mietelause</p>
         <a href="#log_out">Kirjaudu ulos</a>
         <a id="help-icon" href="#help">
@@ -54,16 +53,22 @@
       </div>
       <div class="footer"></div>
     </div>
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2 id="modal-title"></h2>
-        </div>
-        <div class="modal-body">
-          <!-- Lisää modal sisältö tähän -->
-        </div>
+    <div id="infoModal" class="modalInfo">
+      <div class="modal-contentInfo">
+        <span class="closeInfo">&times;</span>
+        <h1>💡Infopankki</h1>
+        <h2>Linkkejä hyvinvointiin ja terveyteen:</h2>
+        <div class="listOfLinks">
+          <ul><a href="https://www.duodecimlehti.fi/duo50084">Sykevälivaihtelu</a></ul>
+          <ul><a href="https://thl.fi/fi/web/elintavat-ja-ravitsemus/liikunta/liikunnan-terveyshyodyt">Liikunnan tuomat terveyshyödyt</a></ul>
+          <ul><a href="https://ukkinstituutti.fi/liike-laakkeena/liikunta-ja-mielen-hyvinvointi/">Liikuntasuositukset</a></ul>
+          <ul><a href="https://ukkinstituutti.fi/liikkuminen/liikkumisen-suositukset/aikuisten-liikkumisen-suositus/">Liikunta ja mielen hyvinvointi</a></ul>
       </div>
+    </div>
+    <div id="helpModal" class="modalHelp">
+      <div class="modal-contentHelp">
+        <span class="closeHelp">&times;</span>
+        <h1>Käyttöopas</h1>
     </div>
     <script src="etusivu_opiskelija.js"></script>
   </body>
