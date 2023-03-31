@@ -23,6 +23,18 @@ body {
     background-color: #FF8055;
 }
 
+.activities {
+    list-style: none;
+    border: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+.ul {
+    list-style: none;
+}
+  
+
 .diary{
     grid-area: auto;
     width: 100%;
@@ -44,6 +56,9 @@ body {
     grid-area: footer;
 }
 
+textarea::placeholder {
+    color: #888;
+}
 
 #activities {
     margin-right: 1em;
