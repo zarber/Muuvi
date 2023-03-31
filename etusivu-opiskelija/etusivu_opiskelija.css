@@ -217,6 +217,11 @@ body button:active{
     justify-self: end;
 }
 
+.emoji-active {
+    opacity: 0.5;
+    color: #2EC4B6
+}
+
 .fa-face-laugh-beam:hover {
     color: #FF8055;
 }

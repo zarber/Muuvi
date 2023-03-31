@@ -1,30 +1,3 @@
-function openModal(buttonText) {
-    const modal = document.getElementById('modal');
-    const title = document.getElementById('modal-title');
-    const close = document.getElementsByClassName('close')[0];
-  
-    title.textContent = buttonText;
-    modal.style.display = 'block';
-  
-    close.onclick = function() {
-      modal.style.display = 'none';
-    }
-  
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    }
-  }
-  
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const buttonIDs = ['infopankki', 'liikuntasuunnitelma', 'aktiviteetit'];
-    buttonIDs.forEach(id => {
-      const button = document.getElementById(id);
-      button.addEventListener('click', () => openModal(button.textContent));
-    });
-  });
-  
 function topNavFunction() {
     var x = document.getElementById("topNav");
     if (x.className === "navigation") {
@@ -74,4 +47,35 @@ const aphorisms = [
 var randomAphorism = Math.floor(Math.random()*aphorisms.length);
 document.getElementById("aphorism").innerText = aphorisms[randomAphorism];
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const diaryForm = document.querySelector('form');
   
+  diaryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const activeEmoji = document.querySelector('.emoji-active');
+    
+    if (activeEmoji) {
+      const emojiClone = activeEmoji.cloneNode(true);
+      li.appendChild(emojiClone);
+    }
+  });
+  
+  // Emoji click handling
+  const emojis = document.querySelectorAll('.emoji');
+  
+  emojis.forEach(emoji => {
+    emoji.addEventListener('click', (event) => {
+      // Remove the 'emoji-active' class from all other emojis
+      emojis.forEach(otherEmoji => {
+        if (otherEmoji !== event.target) {
+          otherEmoji.classList.remove('emoji-active');
+        }
+      });
+
+      // Toggle the 'emoji-active' class for the clicked emoji
+      event.target.classList.toggle('emoji-active');
+    });
+  });
+}); 
