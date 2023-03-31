@@ -32,6 +32,46 @@ function topNavFunction() {
     } else {
       x.className = "navigation";
     }
-  }
+}
+
+var infomodal = document.getElementById("infoModal");
+var infobtn = document.getElementById("info");
+var infospan = document.getElementsByClassName("closeInfo")[0];
+
+var helpmodal = document.getElementById("helpModal");
+var helpbtn = document.getElementById("help-icon");
+var helpspan = document.getElementsByClassName("closeHelp")[0];
+
+infobtn.onclick = function() {
+  infomodal.style.display = "block";
+}
+helpbtn.onclick = function() {
+  helpmodal.style.display = "block";
+}
+
+infospan.onclick = function() {
+  infomodal.style.display = "none";
+}
+helpspan.onclick = function() {
+  helpmodal.style.display = "none";
+}
+
+
+const aphorisms = [
+    '"Liikunta on parasta terveydenhoitoa."',
+    '"Liikunta lisää hyvää oloa."',
+    '"Et koskaan tiedä rajojasi, ellet ylitä niitä."',
+    '"Pitkäkin matka täytyy aloittaa yhdellä askelella."',
+    '"Kaikki on mahdollista. Mahdottoman toteuttaminen vain vie hieman enemmän aikaa."',
+    '"Tulevaisuus tulee. Vain sinä voit päättää, mihin se menee."',
+    '"Tee yksi ihminen onnelliseksi joka päivä — vaikkapa se olisit sinä itse."',
+    '"Jokainen voi kuntoilla omien voimiensa mukaan."',
+    '"Loppujen lopuksi kadumme vain mahdollisuuksia, joihin emme tarttuneet."',
+    '"Sinun täytyy odottaa asioita itseltäsi ennen kuin pystyt niihin."',
+    '"Se ei ole vuori, jonka valloitamme, vaan itsemme."'
+  ];
+
+var randomAphorism = Math.floor(Math.random()*aphorisms.length);
+document.getElementById("aphorism").innerText = aphorisms[randomAphorism];
 
   
