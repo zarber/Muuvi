@@ -30,7 +30,6 @@ body {
     height: 2.4em;
     margin-top: 1.2em;
     margin-left: 0.5em;
-    margin-right: 0.5em;
     border-radius: 18px;
     text-decoration:none;
     font-family: 'Quicksand', sans-serif;
@@ -69,7 +68,7 @@ body {
     background-color: #FFEDD8;
     text-align: center;
     margin-bottom: 1.5em;
-    margin-left: 1em;
+    margin-right: 2em;
     font-family: 'Nunito', sans-serif;
     font-size: 1.2em;
     width: 22em;
@@ -139,7 +138,7 @@ body {
 }
 
 .closeHelp:hover,
-.closeInfo:focus {
+.closeHelp:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

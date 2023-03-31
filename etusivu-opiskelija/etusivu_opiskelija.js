@@ -34,23 +34,23 @@ function topNavFunction() {
     }
 }
 
-var infomodal = document.getElementById("infoModal");
-var infobtn = document.getElementById("info");
-var infospan = document.getElementsByClassName("closeInfo")[0];
-
-var helpmodal = document.getElementById("helpModal");
-var helpbtn = document.getElementById("help-icon");
-var helpspan = document.getElementsByClassName("closeHelp")[0];
+const infomodal = document.getElementById("infoModal");
+const infobtn = document.getElementById("info");
+const infospan = document.getElementsByClassName("closeInfo")[0];
 
 infobtn.onclick = function() {
   infomodal.style.display = "block";
 }
-helpbtn.onclick = function() {
-  helpmodal.style.display = "block";
-}
-
 infospan.onclick = function() {
   infomodal.style.display = "none";
+}
+
+const helpmodal = document.getElementById("helpModal");
+const helpbtn = document.getElementById("help-icon");
+const helpspan = document.getElementsByClassName("closeHelp")[0];
+
+helpbtn.onclick = function() {
+  helpmodal.style.display = "block";
 }
 helpspan.onclick = function() {
   helpmodal.style.display = "none";
@@ -61,7 +61,7 @@ const aphorisms = [
     '"Liikunta on parasta terveydenhoitoa."',
     '"Liikunta lisää hyvää oloa."',
     '"Et koskaan tiedä rajojasi, ellet ylitä niitä."',
-    '"Pitkäkin matka täytyy aloittaa yhdellä askelella."',
+    '"Pitkäkin matka täytyy aloittaa yhdellä askeleella."',
     '"Kaikki on mahdollista. Mahdottoman toteuttaminen vain vie hieman enemmän aikaa."',
     '"Tulevaisuus tulee. Vain sinä voit päättää, mihin se menee."',
     '"Tee yksi ihminen onnelliseksi joka päivä — vaikkapa se olisit sinä itse."',
