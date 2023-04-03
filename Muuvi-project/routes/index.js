@@ -25,6 +25,12 @@ router.get('/etusivu_opiskelija', ensureGuest, (req, res) => {
   });
 });
 
+router.get('/activities_and_diary', ensureGuest, (req, res) => {
+  res.render('activities_and_diary', {
+    layout: 'home',
+  });
+});
+
 // @desc    Dashboard
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
@@ -32,7 +38,7 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
     const decoded = jwt.verify(req.cookies.cookieToken, process.env.SECRET);
     const stories = await Story.find({ user: decoded._id }).lean();
     // const stories = await Story.find({}).lean();
-    res.render('dashboard', {
+    res.render('etusivu_opiskelija', {
       layout: 'etusivu',
       // username: decoded.username,
       stories,

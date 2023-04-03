@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 
 app.use((req, res, next) => {
   console.log(req.path, req.method);
@@ -92,3 +92,6 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+//route for javascript -files
+app.use('/', express.static(__dirname + '/'));
