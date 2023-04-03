@@ -5,8 +5,12 @@ body {
     height: 100%;
 }
 
+h3 {
+    text-decoration: underline;
+}
+
 .grid-container {
-    min-height: 100%;
+    min-height: 100vh;
     display: grid;
     grid-template-areas:
       'header header header header header header'
@@ -79,7 +83,7 @@ body {
 }
 
 #log_out {
-    margin-left: 8%;
+    margin-left: 5em;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -97,7 +101,7 @@ body {
     background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-contentInfo, .modal-contentHelp  {
+.modal-contentInfo {
     background-color: #FFEDD8;
     margin: 10% auto;
     padding: 2em;
@@ -106,6 +110,38 @@ body {
     border: 0.3em solid #FF8055;
     width: 60%;
 }
+
+.modal-contentHelp  {
+    background-color: #FFEDD8;
+    margin: 10% auto;
+    padding: 2em;
+    text-align: justify;
+    list-style-type: circle;
+    border: 0.3em solid #FF8055;
+    width: 60%;
+    height: 60%;
+    overflow-y: auto;
+}
+
+.modal-contentHelp::-webkit-scrollbar {
+    width: 1.5em;
+}
+   
+.modal-contentHelp::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.modal-contentHelp::-webkit-scrollbar-thumb {
+    background-color: #CBF3F0;
+    border: 0.1em solid #2EC4B6;
+}
+
+.helpModalNavigation, .helpModalFrontPage {
+    background-color: #CBF3F0;
+    border: 0.1em solid #2EC4B6;
+    padding: 3%;
+}
+
   
 .listOfLinks a:link {
     color: black;
@@ -218,48 +254,28 @@ body button:active{
 }
 
 .emoji-active {
-    opacity: 0.5;
+    opacity: 1.0;
     color: #2EC4B6
 }
 
 .fa-face-laugh-beam:hover {
-    color: #FF8055;
-}
-
-.fa-face-laugh-beam:active {
     color: #2EC4B6;
 }
 
 .fa-face-smile-beam:hover {
-    color: #FF8055;
-}
-
-.fa-face-smile-beam:active {
     color: #2EC4B6;
 }
 
 .fa-face-grimace:hover {
-    color: #FF8055;
-}
-
-.fa-face-grimace:active {
     color: #2EC4B6;
 }
 
 .fa-face-frown-open:hover {
-    color: #FF8055;
-}
-
-.fa-face-frown-open:active {
-    color: #2EC4B6;
+    color: #2EC4B6;;
 }
 
 .fa-face-frown:hover {
-    color: #FF8055;
-}
-
-.fa-face-frown:active {
-    color: #2EC4B6;
+    color: #2EC4B6;;
 }
 
 form textarea {
