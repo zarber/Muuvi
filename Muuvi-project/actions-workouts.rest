@@ -84,7 +84,4 @@ Content-Type: {{contentType}}
 POST  {{baseurl}}/user/login
 Content-Type: {{contentType}}
 
-{
-    "email": "mirja5@mirja.fi",
-    "password": "45RFgh##@$"
-}
+
