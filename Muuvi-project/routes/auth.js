@@ -14,7 +14,7 @@ const createToken = (_id) => {
 // @route   GET /auth/login
 router.get('/login', ensureGuest, (req, res) => {
   res.render('auth/login', {
-    layout: 'main',
+    layout: 'login',
   });
 });
 
